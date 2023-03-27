@@ -16,17 +16,18 @@ function Book(title, author) {
   this.author = author;
 }
 
-/* This is a method that is being added to the Book prototype. It is a function that returns a string
+/* This is a method that is being added to the Book prototype.
+It is a function that returns a string
 that is the title and author of the book.
 */
 Book.prototype.displayInfo = () => `${this.title.value} by ${this.author.value} `;
 
 /*
- It loops through the array of books, creates an HTML element for each one, and adds a 
+ It loops through the array of books, creates an HTML element for each one, and adds a
  remove button to each element
  */
 function displayBook() {
-  //Clearing the existing list.
+  // Clearing the existing list.
   booksList.innerHTML = '';
 
   // Loop through the array of books and create an HTML element for each one
