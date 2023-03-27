@@ -30,8 +30,10 @@ function displayBook() {
   // Clearing the existing list.
   booksList.innerHTML = '';
 
-  // Loop through the array of books and create an HTML element for each one
+  /* Looping through the array of books, creating an HTML element for each one, and adding a remove
+button to each element. */
   myBooks.forEach((book, index) => {
+  /* Creating a list item and adding the book's title and author to it. */
     const li = document.createElement('li');
     li.textContent = book.displayInfo();
     li.style.listStyle = 'none';
@@ -40,10 +42,11 @@ function displayBook() {
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', () => {
-      // Remove the book from the array and re-render the list
+    /* Removing the book from the array and re-displaying the list. */
       myBooks.splice(index, 1);
       displayBook();
     });
+    /* Adding the remove button to the list item. */
     li.appendChild(removeButton);
 
     // Add the book element to the list
@@ -51,10 +54,17 @@ function displayBook() {
   });
 }
 
+// Save the books array to local storage as a string.
 function saveBookToLocalStorage() {
   localStorage.setItem('books', JSON.stringify(myBooks));
 }
 
+/*
+ We create a new book object, add it to the myBooks array, save the array to local storage,
+ and then display the book
+ title - The title of the book
+ author - The author of the book.
+ */
 function addBook(title, author) {
   const book = new Book(title, author);
   myBooks.push(book);
@@ -62,6 +72,11 @@ function addBook(title, author) {
   displayBook();
 }
 
+/* Adding an event listener to the form that listens for a submit event.
+When the event is triggered, it prevents the form from submitting and reloading the page.
+It then retrieves the title and author input values and adds the book to the list and clears
+the input fields.
+*/
 booksForm.addEventListener('submit', (e) => {
   // Prevent the form from submitting and reloading the page
   e.preventDefault();
