@@ -44,6 +44,7 @@ button to each element. */
     removeButton.addEventListener('click', () => {
     /* Removing the book from the array and re-displaying the list. */
       myBooks.splice(index, 1);
+      localStorage.setItem('books', JSON.stringify(myBooks));
       displayBook();
     });
     /* Adding the remove button to the list item. */
