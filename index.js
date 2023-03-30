@@ -43,7 +43,7 @@ class BooksList {
       // Setting the background color of the list item to either #f2f2f2 or #fff.
       li.style.backgroundColor = index % 2 === 0 ? '#f2f2f2' : '#fff';
       li.style.padding = '1%';
-      li.style.margin = '10px 0';
+      li.style.margin = '17px 0';
 
       const removeButton = document.createElement('button');
       removeButton.textContent = 'Remove';
@@ -134,3 +134,65 @@ class BooksList {
 
 // Creating a new instance of the BooksList class.
 const newBooksList = new BooksList();
+
+// Get Date
+const dateTime = document.querySelectorAll('.date');
+
+// Selecting the nav elements with the class names of list, add, and contact.
+const list = document.querySelector('.list');
+const add = document.querySelector('.add');
+const contact = document.querySelector('.contact');
+
+// Selecting the main section elements with the ids of books, add-book, and contact.
+const allBooks = document.querySelector('#books');
+const addBook = document.querySelector('#add-book');
+const getContact = document.querySelector('#contact');
+
+// Getting the current date and time and then displaying it on the page.
+const date = new Date();
+const dateNow = date.toDateString();
+const timeNow = date.toLocaleTimeString();
+const finalDateTime = dateNow.concat(', ', timeNow);
+
+/* Looping through the array of dateTime and setting the innerHTML of each item
+to the finalDateTime. */
+dateTime.forEach((item) => {
+  item.innerHTML = finalDateTime;
+});
+
+/*
+ When the user clicks the button with the id of 'add-book', show the div with the id of 'add-book'
+ and hide the div with the id of 'all-books'. */
+function showAddNewBook() {
+  addBook.style.display = 'flex';
+  allBooks.style.display = 'none';
+  getContact.style.display = 'none';
+}
+/* Adding an event listener to the add button. When the add button is clicked, it will call the
+showAddNewBook function. */
+add.addEventListener('click', showAddNewBook);
+
+/*
+ The function showContact() is called when the user clicks on the "Contact" button. The function
+ hides the addBook and allBooks divs and displays the getContact div
+ */
+function showContact() {
+  getContact.style.display = 'flex';
+  addBook.style.display = 'none';
+  allBooks.style.display = 'none';
+}
+/* Adding an event listener to the contact button. When the contact button is clicked,
+it will call the showContact function. */
+contact.addEventListener('click', showContact);
+
+/*
+ When the user clicks the 'Show Books' button, the 'allBooks' div is displayed, and the
+ 'addBook' and 'getContact' divs are hidden. */
+function showBooks() {
+  allBooks.style.display = 'flex';
+  addBook.style.display = 'none';
+  getContact.style.display = 'none';
+}
+/* Adding an event listener to the list button. When the list button is clicked, it will call the
+showBooks function. */
+list.addEventListener('click', showBooks);
