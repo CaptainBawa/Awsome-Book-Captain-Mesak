@@ -136,10 +136,10 @@ class BooksList {
 const newBooksList = new BooksList();
 
 // Get Date
-const dateTime = document.querySelectorAll('.date')
+const dateTime = document.querySelectorAll('.date');
 
-let date = new Date();
-let dateNow = date.toDateString()
-let timeNow = date.toLocaleTimeString();
-let finalDateTime = dateNow.concat(", ", timeNow);
-dateTime.forEach(item => item.innerHTML = finalDateTime)
+const date = new Date();
+const dateNow = date.toDateString();
+const timeNow = date.toLocaleTimeString();
+const finalDateTime = dateNow.concat(', ', timeNow);
+dateTime.forEach((item) => item.innerHTML = finalDateTime);
