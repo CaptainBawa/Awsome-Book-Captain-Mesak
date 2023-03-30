@@ -193,7 +193,7 @@ nav a:not(:first-child):not(:last-child) {
   display: none;
 }
 
-/* Hover starts here */
+/* Focus starts here */
 .list:focus,
 .add:focus,
 .contact:focus {
