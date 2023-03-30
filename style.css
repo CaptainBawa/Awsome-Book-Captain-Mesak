@@ -1,3 +1,121 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 600;
+  width: 40%;
+  font-size: 1.5rem;
+  min-width: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+#error {
+  color: red;
+}
+
 #book-list {
   padding-inline-start: 0;
+  padding: 10px;
+  list-style: none;
+  border: 3px solid black;
+  width: 70%;
+  min-width: 360px;
+}
+
+.line {
+  width: 80px;
+  height: 0;
+  border-bottom: 2px solid black;
+}
+
+.book-lists {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  font-size: 1.1rem;
+  font-weight: 600;
+  align-items: center;
+}
+
+.uniqueId {
+  display: none;
+}
+
+#books {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#book-form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#book-form h2 {
+  font-size: 1.2rem;
+  width: 80%;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+#book-form input {
+  width: 100%;
+  border: 2px solid black;
+  min-width: 200px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px;
+}
+
+#book-form button {
+  width: 40px;
+  align-self: flex-end;
+  border: 2px solid black;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 3px 3px black;
+}
+
+.remove-btn {
+  padding: 5px;
+  border: 2px solid black;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 5px 5px black;
+  margin: 6px;
+  float: right;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: black;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
 }
