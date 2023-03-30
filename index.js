@@ -40,10 +40,13 @@ class AddBook {
   }
 }
 
+// It removes a book from the local storage
 class RemoveBook {
   static removeBook(id) {
     const bookID = parseInt(id, 10);
     const books = AddBook.getBooks();
+    /* Filtering the books array and returning a new array with the book that has
+    the same bookID as the one passed in. */
     const filteredBooks = books.filter((book) => book.bookId !== bookID);
     localStorage.setItem('books', JSON.stringify(filteredBooks));
     document.location.reload();
