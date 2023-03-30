@@ -9,20 +9,49 @@
     <title>Awesome Book Homepage</title>
 </head>
 <body>
-    <header><h1>All awesome books</h1></header>
+    <header>
+        <p>Awesome Books</p>
+        <nav>
+            <a href="/html/">List</a> 
+            <a href="/css/">Add new</a> 
+            <a href="/js/">Contact</a> 
+        </nav>
+    </header>
     <main>
-        <section id="books">
-                <ul id="book-list">
-                </ul>
-                <h1 id="error"></h1>
-                <div class="line"></div>
-                <form id="book-form">
-                  <h2>Add a new book</h2>
-                  <input type="text" id="title" placeholder="Title"><br>
-                  <input type="text" id="author" placeholder="Author"><br>
-                  <button type="submit">Add</button><br>
-                </form>
+        <section id="books" class="containers">
+            <div class="date">date</div>
+            <h1>All awesome books</h1>
+            <ul id="book-list">
+            </ul>
         </section>
-    </main>   
+
+        <section id="add-book" class="containers">
+            <div class="date">date</div>
+            <form id="book-form">
+                <h2>Add a new book</h2>
+                <h3 id="error"></h3>
+                <input type="text" id="title" placeholder="Title"><br>
+                <input type="text" id="author" placeholder="Author"><br>
+                <button type="submit">Add</button><br>
+            </form>
+        </section>
+
+        <section id="contact" class="containers">
+            <div class="date">date</div>
+            <div class="contact-info">
+                <h2>Contact information</h2>
+                <p>Do have any questions or you just want to say "Hello"?</p>
+                <p>You can reach out to us!</p>
+                <ul>
+                    <li>Our e-mail: mail@mail.com</li>
+                    <li>Our phone number: 0043586534422</li>
+                    <li>Our address: Streetname 22, 84503 City, Country</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright  ...</p>
+    </footer>   
 </body>
 </html>

@@ -134,3 +134,12 @@ class BooksList {
 
 // Creating a new instance of the BooksList class.
 const newBooksList = new BooksList();
+
+// Get Date
+const dateTime = document.querySelectorAll('.date')
+
+let date = new Date();
+let dateNow = date.toDateString()
+let timeNow = date.toLocaleTimeString();
+let finalDateTime = dateNow.concat(", ", timeNow);
+dateTime.forEach(item => item.innerHTML = finalDateTime)
