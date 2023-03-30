@@ -18,6 +18,10 @@ header h1 {
   justify-content: center;
 }
 
+#error {
+  color: red;
+}
+
 #book-list {
   padding-inline-start: 0;
   padding: 10px;
