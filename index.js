@@ -44,13 +44,9 @@ class RemoveBook {
   static removeBook(id) {
     const bookID = parseInt(id, 10);
     const books = AddBook.getBooks();
-    books.forEach((book, index) => {
-      if (book.bookId === bookID) {
-        books.splice(index, 1);
-        localStorage.setItem('books', JSON.stringify(books));
-        document.location.reload();
-      }
-    });
+    const filteredBooks = books.filter((book) => book.bookId !== bookID);
+    localStorage.setItem('books', JSON.stringify(filteredBooks));
+    document.location.reload();
   }
 }
 
@@ -111,3 +107,11 @@ document.addEventListener(
     }));
   },
 );
+
+/* Changing the background color of the book list. */
+const bookLists = document.querySelectorAll('.book-lists');
+bookLists.forEach((bookList, index) => {
+  if (index % 2 === 0) {
+    bookList.style.background = '#F2F2F2';
+  }
+});
