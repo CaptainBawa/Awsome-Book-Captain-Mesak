@@ -108,7 +108,6 @@ nav a:not(:first-child):not(:last-child) {
   font-size: 0.8rem;
   font-weight: 600;
   box-shadow: 5px 5px black;
-  margin: 6px;
   float: right;
 }
 
@@ -184,4 +183,19 @@ nav a:not(:first-child):not(:last-child) {
   color: black;
   font-size: 0.8rem;
   font-weight: 700;
+}
+/* Hiding add a new book and contact containers */
+#add-book {
+  display: none;
+}
+
+#contact {
+  display: none;
+}
+
+/* Hover starts here */
+.list:focus,
+.add:focus,
+.contact:focus {
+  color: blue;
 }
