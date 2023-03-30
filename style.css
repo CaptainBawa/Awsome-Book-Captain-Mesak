@@ -2,6 +2,11 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border: 2px solid black;
   padding: 10px;
+  min-width: 430px;
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 * {
@@ -24,6 +29,10 @@ body {
   color: black;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+main {
+  margin-bottom: auto;
 }
 
 footer {
@@ -58,6 +67,7 @@ header p {
   display: flex;
   justify-content: center;
 }
+
 nav {
   display: flex;
   align-items: center;
@@ -77,6 +87,7 @@ nav a:not(:first-child):not(:last-child) {
   border-left: 2px solid black;
   border-right: 2px solid black;
 }
+
 /* book lists */
 #books h1 {
   color: black;
@@ -89,7 +100,7 @@ nav a:not(:first-child):not(:last-child) {
   padding: 10px;
   list-style: none;
   border: 3px solid black;
-  width: 70%;
+  width: 90%;
   min-width: 360px;
 }
 
@@ -128,6 +139,12 @@ nav a:not(:first-child):not(:last-child) {
   justify-content: center;
 }
 
+.contact-info h2 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
 #book-form h2 {
   font-size: 1.5rem;
   font-weight: 900;
@@ -158,6 +175,7 @@ nav a:not(:first-child):not(:last-child) {
 ::placeholder {
   color: black;
   opacity: 1;
+
   /* Firefox */
 }
 
@@ -172,11 +190,6 @@ nav a:not(:first-child):not(:last-child) {
 }
 
 /* Contact section */
-.contact-info h2 {
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 900;
-}
 
 .contact-info p,
 .contact-info ul li {
@@ -184,6 +197,7 @@ nav a:not(:first-child):not(:last-child) {
   font-size: 0.8rem;
   font-weight: 700;
 }
+
 /* Hiding add a new book and contact containers */
 #add-book {
   display: none;
@@ -197,5 +211,5 @@ nav a:not(:first-child):not(:last-child) {
 .list:focus,
 .add:focus,
 .contact:focus {
-  color: #0000FF;
+  color: #00f;
 }
