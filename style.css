@@ -197,5 +197,5 @@ nav a:not(:first-child):not(:last-child) {
 .list:focus,
 .add:focus,
 .contact:focus {
-  color: blue;
+  color: #0000FF;
 }
